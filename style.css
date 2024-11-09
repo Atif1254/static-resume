@@ -1,0 +1,269 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: #d0d0d0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #0b0a0a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #34495e;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+/* Header Section */
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 20px;
+}
+
+.imgBox {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-info {
+    flex-grow: 1;
+    margin-left: 30px;
+}
+
+#name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+#title {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+#title span {
+    font-weight: 700;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #2ecc71;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+ul li strong {
+    color: #34495e;
+}
+
+ul li a {
+    color: #3498db;
+}
+
+/* Skills Section - Flexbox for Skills */
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.skills li {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Personal Information Section */
+.personal-info ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.personal-info li {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .header-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imgBox {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #name {
+        font-size: 2rem;
+    }
+
+    #title {
+        font-size: 1.1rem;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    .skills ul {
+        justify-content: center;
+    }
+
+    .skills li {
+        font-size: 0.9rem;
+    }
+
+    .personal-info ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imgBox {
+        width: 130px;
+        height: 130px;
+    }
+
+    .header-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #name {
+        font-size: 2.2rem;
+    }
+
+    #title {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills li {
+        font-size: 1rem;
+    }
+
+    .personal-info ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop Devices */
+@media (min-width: 1024px) {
+    .container {
+        width: 85%;
+    }
+
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .imgBox {
+        width: 150px;
+        height: 150px;
+    }
+
+    #name {
+        font-size: 2.5rem;
+    }
+
+    #title {
+        font-size: 1.3rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .skills li {
+        font-size: 1.1rem;
+    }
+
+    .personal-info ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
